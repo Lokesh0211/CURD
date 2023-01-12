@@ -18,6 +18,9 @@ public static void main(String[] args) {
 		System.out.println("table created succesfully");
 		stmt.execute("INSERT INTO student VALUES(1,'amit',10,'A',90)");
 		stmt.execute("INSERT INTO student VALUES(2,'lokesh',10,'A',100)");
+		stmt.execute("INSERT INTO student VALUES(3,'rishi',10,'A',85)");
+		stmt.execute("INSERT INTO student VALUES(4,'david',10,'A',90)");
+		stmt.execute("INSERT INTO student VALUES(5,'syed',10,'A',100)");
 		System.out.println("inserted succesfully");
 	    stmt.execute("UPDATE student set marks=95 where roll=1");
 		String str = "select * from student";
@@ -28,8 +31,8 @@ public static void main(String[] args) {
 			System.out.println(rs.getInt(1)+"\t"+rs.getString(2)+"\t"+rs.getInt(3)+"\t"+rs.getString(4)+"\t"+rs.getInt(5));
 		}
 		}
-		ystem.out.println("updated succesfully");
-		stmt.execute("DELETE FROM student where roll=1");
+		System.out.println("updated succesfully");
+		stmt.execute("DELETE FROM student where roll=4");
 		System.out.println("deleted succesfully");
 		}
 		catch (Exception e){
